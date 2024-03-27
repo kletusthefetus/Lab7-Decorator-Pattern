@@ -28,9 +28,10 @@ public interface IShuffleList<T> extends List<T> {
      */
     default void shuffle(int swaps) {
         Random rand = new Random();
+        int randPos1, randPos2;
         for (int i = 0; i < swaps; i++) {
-            int randPos1 = rand.nextInt(size());
-            int randPos2 = rand.nextInt(size());
+            randPos1 = rand.nextInt(size());
+            randPos2 = rand.nextInt(size());
             T temp = get(randPos1);
             set(randPos1, get(randPos2));
             set(randPos2, temp);
@@ -45,7 +46,9 @@ public interface IShuffleList<T> extends List<T> {
      * @post
      */
     default void swap(int i, int j) {
-
+        T temp = get(i);
+        set(i, get(j));
+        set(j, temp);
     }
 
 
