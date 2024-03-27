@@ -50,32 +50,33 @@ public class ShuffleList<T> implements IShuffleList<T> {
 
     @Override
     public boolean add(T e) {
-        // complete this method
+        myList.add(e);
     }
 
     @Override
     public T get(int i) {
-        // complete this method
+        myList.get(i);
     }
 
     @Override
     public void add(int index, T e) {
-        // complete this method
+        myList.add(index, e);
     }
 
     @Override
     public int size() {
-        // complete this method
+        return myList.size();
     }
 
     @Override
     public void clear() {
-        // complete this method
+        myList.clear();
     }
 
     @Override
     public T set(int i, T x) {
-        // complete this method
+        myList.set(i, x);
+        return x;
     }
 
     @Override
