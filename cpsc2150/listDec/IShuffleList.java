@@ -6,7 +6,7 @@
  * Kenny Nguyen
  */
 
-import package CPSC2150.listDec
+package cpsc2150.listDec
 
 import java.util.Random;
 
@@ -19,18 +19,22 @@ import java.util.Random;
  * @Initialization_ensures A list is created with the ability to populate it with elements.
  *
  */
-public interface IShuffleList extends List
-{
+public interface IShuffleList<T> extends List<T> {
     /**
      * Method to swap a determined number of elements with eachother
      * @param swaps - the number of swaps to be done
      * @pre swaps > 0
      * @post
      */
-    default void shuffle(int swaps)
-    {
-        Random ranGen = new Random();
-
+    default void shuffle(int swaps) {
+        Random rand = new Random();
+        for (int i = 0; i < swaps; i++) {
+            int randPos1 = rand.nextInt(size());
+            int randPos2 = rand.nextInt(size());
+            T temp = get(randPos1);
+            set(randPos1, get(randPos2));
+            set(randPos2, temp);
+        }
     }
 
     /**
@@ -40,8 +44,7 @@ public interface IShuffleList extends List
      * @pre 0 <= i < [size of list] AND 0 <= j < [size of list]
      * @post
      */
-    default void swap(int i, int j)
-    {
+    default void swap(int i, int j) {
 
     }
 
