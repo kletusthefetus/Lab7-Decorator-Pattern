@@ -1,3 +1,11 @@
+/**
+ * Team Names:
+ * Christina Foley
+ * Sofia Gray
+ * James Maner
+ * Kenny Nguyen
+ */
+
 package cpsc2150.listDec;
 
 import java.util.ArrayList;
