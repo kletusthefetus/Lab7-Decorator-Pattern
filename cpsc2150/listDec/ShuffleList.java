@@ -50,7 +50,7 @@ public class ShuffleList<T> implements IShuffleList<T> {
 
     @Override
     public boolean add(T e) {
-        myList.add(e);
+        return myList.add(e);
     }
 
     @Override
