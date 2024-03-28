@@ -32,7 +32,7 @@ public interface IShuffleList<T> extends List<T> {
      *
      * @post |self| = |self| AND self = [all the same elements in the list but at different places within the list]
      */
-    default void shuffle(int swaps) {
+    public default void shuffle(int swaps) {
         Random rand = new Random();
         int randPos1, randPos2;
         for (int i = 0; i < swaps; i++) {
@@ -55,7 +55,7 @@ public interface IShuffleList<T> extends List<T> {
      * @post |self| = |self|
      * AND self = [all the same elements in the list but the elements at i and j are swapped]
      */
-    default void swap(int i, int j) {
+   public default void swap(int i, int j) {
         T temp = get(i);
         set(i, get(j));
         set(j, temp);
