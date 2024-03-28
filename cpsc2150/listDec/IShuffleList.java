@@ -51,7 +51,7 @@ public interface IShuffleList<T> extends List<T> {
      * @param i - the index of an element being swapped
      * @param j - the index of the other element to swap with
      *
-     * @pre 0 <= i < [size of list] AND 0 <= j < [size of list]
+     * @pre 0 <= i < |self| AND 0 <= j < |self|
      *
      * @post |self| = |self|
      * AND self = [all the same elements in the list but the elements at i and j are swapped]
