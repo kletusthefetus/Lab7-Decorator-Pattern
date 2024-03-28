@@ -6,7 +6,7 @@
  * Kenny Nguyen
  */
 
-package cpsc2150.listDec
+package cpsc2150.listDec;
 
 import java.util.Random;
 
