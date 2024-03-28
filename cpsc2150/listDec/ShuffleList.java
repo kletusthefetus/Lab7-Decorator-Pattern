@@ -55,7 +55,7 @@ public class ShuffleList<T> implements IShuffleList<T> {
 
     @Override
     public T get(int i) {
-        myList.get(i);
+        return myList.get(i);
     }
 
     @Override
