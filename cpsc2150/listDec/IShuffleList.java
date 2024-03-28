@@ -15,9 +15,9 @@ import java.util.Random;
  * The interface defines default methods to swap two elements
  * and to shuffle around the elements a certain number of times.
  *
- * @defines myList = a list of elements containing data
+ * @defines self = a list of elements containing data
  *
- * @constraints |myList| >= 0
+ * @constraints |self| >= 0
  *
  * @Initialization_ensures A list is created with the ability to populate it with elements.
  *
@@ -30,7 +30,7 @@ public interface IShuffleList<T> extends List<T> {
      *
      * @pre swaps > 0
      *
-     * @post |myList| = |myList| AND myList = [all the same elements in the list but at different indexes]
+     * @post |self| = |self| AND self = [all the same elements in the list but at different places within the list]
      */
     default void shuffle(int swaps) {
         Random rand = new Random();
@@ -52,8 +52,8 @@ public interface IShuffleList<T> extends List<T> {
      *
      * @pre 0 <= i < [size of list] AND 0 <= j < [size of list]
      *
-     * @post |myList| = |myList|
-     * AND myList = [all the same elements in the list but the elements at i and j are swapped]
+     * @post |self| = |self|
+     * AND self = [all the same elements in the list but the elements at i and j are swapped]
      */
     default void swap(int i, int j) {
         T temp = get(i);
