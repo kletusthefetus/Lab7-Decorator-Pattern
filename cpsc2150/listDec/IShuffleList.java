@@ -9,6 +9,7 @@
 package cpsc2150.listDec;
 
 import java.util.Random;
+import java.util.List;
 
 /**
  * The interface IShuffleList contains a list of elements to contain data.
@@ -60,6 +61,4 @@ public interface IShuffleList<T> extends List<T> {
         set(i, get(j));
         set(j, temp);
     }
-
-
 }
